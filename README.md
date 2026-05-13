@@ -9,9 +9,11 @@ célula ágil con gestión colaborativa y control de versiones (Git, GitHub y Ji
 Ana Termignoni
 
 ## Integrantes simulados del Equipo
-P1 - Rol: Líder y Organizador | Nombre: Hugo | Tareas: Gobernanza del repositorio, estructura de carpetas y documentación |
-P2 - Rol: Desarrollador Técnico | Nombre: Paco | Tareas: Script de análisis estadístico en Python |
-P3 - Rol: Revisor y QA | Nombre: Luis | Tareas: Peer Review, documentación interna y cierre de Pull Requests |
+| Rol | Nombre | Tareas |
+|-----|--------|--------|
+| P1 - Líder y Organizador | Hugo | Gobernanza del repositorio, estructura de carpetas y documentación |
+| P2 - Desarrollador Técnico | Paco | Script de análisis estadístico en Python |
+| P3 - Revisor y QA | Luis | Peer Review, documentación interna y cierre de Pull Requests |
 
 ## Gestión del Proyecto
 Las tareas fueron gestionadas en Jira bajo el proyecto PROY:
