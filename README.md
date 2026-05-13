@@ -23,11 +23,16 @@ Las tareas fueron gestionadas en Jira bajo el proyecto PROY:
 
 ## Escenario Elegido
 **Escenario A — Análisis de Datos Climáticos**
+
 Procesamiento de datos meteorológicos para calcular indicadores de temperatura y precipitaciones.
 
 ## Dataset Utilizado
+- **Descripción**
+Datos de temperatura promedio global.
+Registros mensuales y anuales.
 - **Fuente:** DataHub — Global Temperature (GISTEMP)
 - **URL:** https://datahub.io/core/global-temp
+- **Formato:** CSV.
 
 ## Instrucciones para Ejecutar el Script
 1. Clonar el repositorio
