@@ -1,2 +1,36 @@
-# TP2_datos_clima
-TP2 OE - Análisis de Datos Climáticos
+# TP2 - OE - Análisis de Datos Climáticos
+
+## Descripción del Proyecto
+Proyecto desarrollado para la materia Organización Empresarial de la Tecnicatura Universitaria en Programación - UTN.
+El proyecto consiste en un programa de análisis de datos meteorológicos para generar indicadores básicos de temperatura, bajo las metodologías de
+célula ágil con gestión colaborativa y control de versiones (Git, GitHub y Jira).
+
+## Integrante del equipo
+Ana Termignoni
+
+## Integrantes simulados del Equipo
+P1 - Rol: Líder y Organizador | Nombre: Hugo | Tareas: Gobernanza del repositorio, estructura de carpetas y documentación |
+P2 - Rol: Desarrollador Técnico | Nombre: Paco | Tareas: Script de análisis estadístico en Python |
+P3 - Rol: Revisor y QA | Nombre: Luis | Tareas: Peer Review, documentación interna y cierre de Pull Requests |
+
+## Gestión del Proyecto
+Las tareas fueron gestionadas en Jira bajo el proyecto PROY:
+- PROY-1: Inicialización del repositorio
+- PROY-2: Desarrollo del script de análisis
+- PROY-3: Revisión QA y merge final
+
+## Escenario Elegido
+**Escenario A — Análisis de Datos Climáticos**
+Procesamiento de datos meteorológicos para calcular indicadores de temperatura y precipitaciones.
+
+## Dataset Utilizado
+- **Fuente:** DataHub — Global Temperature (GISTEMP)
+- **URL:** https://datahub.io/core/global-temp
+
+## Instrucciones para Ejecutar el Script
+1. Clonar el repositorio
+2. Abrir scripts/analisis_datos.py en Google Colab o Jupyter Notebook
+3. Asegurarse de que el archivo CSV esté en la carpeta /datos
+4. Ejecutar todas las celdas en orden
+5. Los resultados se guardan automáticamente en /resultados
+
