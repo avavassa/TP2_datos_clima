@@ -1,0 +1,9 @@
+=== GISTEMP ===
+Anomalía promedio: 0.02°C
+Anomalía máxima:   0.99°C (año 2016)
+Anomalía mínima:   -0.47°C (año 1909)
+
+=== GCAG ===
+Anomalía promedio: 0.05°C
+Anomalía máxima:   0.94°C (año 2016)
+Anomalía mínima:   -0.44°C (año 1908)
