@@ -1,17 +1,18 @@
-
-
 import urllib.request
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Importar dataset
+# Descarga el dataset directamente desde DataHub para garantizar la reproducibilidad
+# del análisis sin depender de archivos locales que podrían no estar disponibles
 
 urllib.request.urlretrieve(
     "https://pkgstore.datahub.io/core/global-temp/annual_csv/data/a26b154688b061cdd04f1df36e4408be/annual_csv.csv",
     "datos/dataset.csv")
 print("Dataset descargado correctamente")
 
-# Cargamos el dataset
+# Carga el dataset
+# Usamos try-except para dar un mensaje claro al usuario si el archivo no existe
+# y en ese caso se termina el programa con exit()
 
 try:
     df = pd.read_csv("datos/dataset.csv")
@@ -21,10 +22,15 @@ except FileNotFoundError:
     print("Asegurate de que el archivo CSV esté dentro de la carpeta 'datos'.")
     exit()
 
+# El dataset contiene dos fuentes independientes que miden la misma variable
+# Las separamos para comparar ambas series sin mezclar datos de origen diferente
 
-# Separamos las fuentes
 df_gistemp = df[df["Source"] == "GISTEMP"].sort_values("Year")
 df_gcag = df[df["Source"] == "GCAG"].sort_values("Year")
+
+# Los valores de "Mean" representan anomalías respecto al promedio 1951-1980,
+# no temperaturas absolutas. Un valor positivo indica que ese año fue más
+# cálido que el período de referencia.
 
 # Indicadores GISTEMP
 prom_g = df_gistemp["Mean"].mean()
@@ -52,7 +58,10 @@ print(f"Anomalía promedio: {prom_c:.2f}°C")
 print(f"Anomalía máxima:   {max_c:.2f}°C (año {anio_max_c})")
 print(f"Anomalía mínima:   {min_c:.2f}°C (año {anio_min_c})")
 
-# Guardamos los indicadores
+# Guardamos los indicadores en un archivo de texto para que queden disponibles
+# en /resultados sin necesidad de volver a ejecutar el script
+   
+
 with open("resultados/indicadores.txt", "w") as f:
     f.write("=== GISTEMP ===
 ")
@@ -72,7 +81,11 @@ with open("resultados/indicadores.txt", "w") as f:
     f.write(f"Anomalía mínima:   {min_c:.2f}°C (año {anio_min_c})
 ")
 
-# Graficamos
+
+# Graficamos ambas fuentes en el mismo eje para facilitar la comparación visual.
+# La línea punteada en y=0 marca el promedio de referencia histórico
+# lo que permite ver claramente las anomalías.
+
 plt.figure(figsize=(12, 5))
 plt.plot(df_gistemp["Year"], df_gistemp["Mean"], color="steelblue", linewidth=1.5, label="GISTEMP")
 plt.plot(df_gcag["Year"], df_gcag["Mean"], color="coral", linewidth=1.5, label="GCAG")
