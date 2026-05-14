@@ -24,20 +24,19 @@ Las tareas fueron gestionadas en Jira bajo el proyecto PROY:
 ## Escenario Elegido
 **Escenario A — Análisis de Datos Climáticos**
 
-Procesamiento de datos meteorológicos para calcular indicadores de temperatura y precipitaciones.
+Procesamiento de datos meteorológicos para calcular indicadores de anomalías de temperatura globales.
 
 ## Dataset Utilizado
-- **Descripción**
-Datos de temperatura promedio global.
-Registros mensuales y anuales.
-- **Fuente:** DataHub — Global Temperature (GISTEMP)
+- **Descripción:**
+Datos de anomalías de temperaturas promedio globales.
+Registros anuales desde 1850.
+- **Fuente:** DataHub — Global Temperature
 - **URL:** https://datahub.io/core/global-temp
 - **Formato:** CSV.
 
 ## Instrucciones para Ejecutar el Script
 1. Clonar el repositorio
-2. Abrir scripts/analisis_datos.py en Google Colab o Jupyter Notebook
-3. Asegurarse de que el archivo CSV esté en la carpeta /datos
-4. Ejecutar todas las celdas en orden
-5. Los resultados se guardan automáticamente en /resultados
+2. Abrir scripts/analisis_datos.py en un Notebook o IDE
+3. Ejecutar el script
+4. Los resultados se guardan automáticamente en /resultados
 
