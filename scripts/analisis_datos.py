@@ -71,3 +71,17 @@ with open("resultados/indicadores.txt", "w") as f:
 ")
     f.write(f"Anomalía mínima:   {min_c:.2f}°C (año {anio_min_c})
 ")
+
+# Graficamos
+plt.figure(figsize=(12, 5))
+plt.plot(df_gistemp["Year"], df_gistemp["Mean"], color="steelblue", linewidth=1.5, label="GISTEMP")
+plt.plot(df_gcag["Year"], df_gcag["Mean"], color="coral", linewidth=1.5, label="GCAG")
+plt.axhline(0, color="gray", linestyle="--", linewidth=0.8)
+plt.title("Evolución de la anomalía de temperatura global")
+plt.xlabel("Año")
+plt.ylabel("Anomalía de temperatura (°C)")
+plt.legend()
+plt.tight_layout()
+plt.savefig("resultados/grafico_temperatura.png")
+plt.show()
+print("Gráfico guardado en /resultados")
