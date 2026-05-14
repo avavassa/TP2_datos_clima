@@ -52,8 +52,7 @@ print(f"Anomalía promedio: {prom_g:.2f}°C")
 print(f"Anomalía máxima:   {max_g:.2f}°C (año {anio_max_g})")
 print(f"Anomalía mínima:   {min_g:.2f}°C (año {anio_min_g})")
 
-print("
-=== GCAG ===")
+print("\n=== GCAG ===")
 print(f"Anomalía promedio: {prom_c:.2f}°C")
 print(f"Anomalía máxima:   {max_c:.2f}°C (año {anio_max_c})")
 print(f"Anomalía mínima:   {min_c:.2f}°C (año {anio_min_c})")
@@ -63,23 +62,14 @@ print(f"Anomalía mínima:   {min_c:.2f}°C (año {anio_min_c})")
    
 
 with open("resultados/indicadores.txt", "w") as f:
-    f.write("=== GISTEMP ===
-")
-    f.write(f"Anomalía promedio: {prom_g:.2f}°C
-")
-    f.write(f"Anomalía máxima:   {max_g:.2f}°C (año {anio_max_g})
-")
-    f.write(f"Anomalía mínima:   {min_g:.2f}°C (año {anio_min_g})
-")
-    f.write("
-=== GCAG ===
-")
-    f.write(f"Anomalía promedio: {prom_c:.2f}°C
-")
-    f.write(f"Anomalía máxima:   {max_c:.2f}°C (año {anio_max_c})
-")
-    f.write(f"Anomalía mínima:   {min_c:.2f}°C (año {anio_min_c})
-")
+    f.write("=== GISTEMP ===\n")
+    f.write(f"Anomalía promedio: {prom_g:.2f}°C\n")
+    f.write(f"Anomalía máxima:   {max_g:.2f}°C (año {anio_max_g})\n")
+    f.write(f"Anomalía mínima:   {min_g:.2f}°C (año {anio_min_g})\n")
+    f.write("\n=== GCAG ===\n")
+    f.write(f"Anomalía promedio: {prom_c:.2f}°C\n")
+    f.write(f"Anomalía máxima:   {max_c:.2f}°C (año {anio_max_c})\n")
+    f.write(f"Anomalía mínima:   {min_c:.2f}°C (año {anio_min_c})\n")
 
 
 # Graficamos ambas fuentes en el mismo eje para facilitar la comparación visual.
