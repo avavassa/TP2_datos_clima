@@ -17,9 +17,9 @@ Ana Termignoni
 
 ## Gestión del Proyecto
 Las tareas fueron gestionadas en Jira bajo el proyecto PROY:
-- PROY-1: Inicialización del repositorio
-- PROY-2: Desarrollo del script de análisis
-- PROY-3: Revisión QA y merge final
+- **PROY-1**: Inicialización del repositorio
+- **PROY-2**: Desarrollo del script de análisis
+- **PROY-3**: Revisión QA y merge final
 
 ## Escenario Elegido
 **Escenario A — Análisis de Datos Climáticos**
